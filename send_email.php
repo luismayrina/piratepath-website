@@ -11,10 +11,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
-    $subject = htmlspecialchars($_POST['subject']);
+    $name = ($_POST['name']);
+    $email = ($_POST['email']);
+    $message = ($_POST['message']);
+    $subject = ($_POST['subject']);
 
     $mail = new PHPMailer(true);
     try {
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 587;                   // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('pirepath2024@gmail.com', 'PiratePath');
+        $mail->setFrom('pirepath2024@gmail.com');
         $mail->addAddress('pirepath2024@gmail.com'); // Add a recipient
 
         // Content
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                           <p><strong>Name:</strong> {$name}</p>
                           <p><strong>Email:</strong> {$email}</p>
                           <p><strong>Message:</strong> {$message}</p>";
-        $mail->AltBody = "Name: {$name}\nEmail: {$email}\nMessage: {$message}";
+      //  $mail->AltBody = "Name: {$name}\nEmail: {$email}\nMessage: {$message}";
 
         $mail->send();
         echo 'Message has been sent';
