@@ -211,13 +211,13 @@
             <div class="col-md-3">
               <div class="team-detail wow bounce" data-wow-delay="0.4s"> <img src="images/luis-image.jpg" class="img-fluid"/>
                 <h4>Elijah Luis Mayrina</h4>
-                <p>Project Lead / Full Stack Developer</p>
+                <p>Project Lead / Full-Stack Developer</p>
               </div>
             </div>
             <div class="col-md-3">
               <div class="team-detail wow bounce" data-wow-delay="0.6s"> <img src="images/gionne-image.jpg" class="img-fluid"/>
                 <h4>Gionne Antonio Abogado </h4>
-                <p>Developer</p>
+                <p>Full-Stack Developer</p>
               </div> 
             </div>
           </div>
@@ -325,17 +325,17 @@
         <div class="section-content">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8">
-              <form id="contact_form" action="">
+              <form id="contact_form" action="send_email.php" method="POST">
                 <div class="row">
                   <div class="col">
-                    <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required>
+                    <input type="text" id="your_name" class="form-input w-100" name="name" placeholder="Full Name" required>
                   </div>
                   <div class="col">
                     <input type="email" id="email" class="form-input w-100" name="email" placeholder="Email" required>
                   </div>
                 </div>
                 <input type="text" id="subject" class="form-input w-100" name="subject" placeholder="Subject">
-                <textarea class="form-input w-100" id="message" placeholder="Message" name="message"></textarea>
+                <textarea class="form-input w-100" id="message" placeholder="Message" name="message" required></textarea>
                 <button class="btn-grad w-100 text-uppercase" type="submit" name="button">submit</button>
               </form>
             </div>
